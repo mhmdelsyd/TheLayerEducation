@@ -1,0 +1,16 @@
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\TheLayer.InfraStructure.deps.json
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\TheLayer.InfraStructure.dll
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\TheLayer.InfraStructure.pdb
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\TheLayer.Core.dll
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\TheLayer.Core.pdb
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.csproj.AssemblyReference.cache
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.AssemblyInfoInputs.cache
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.AssemblyInfo.cs
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.csproj.CoreCompileInputs.cache
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.sourcelink.json
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.1D437B33.Up2Date
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.dll
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\refint\TheLayer.InfraStructure.dll
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\TheLayer.InfraStructure.pdb
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\ref\TheLayer.InfraStructure.dll

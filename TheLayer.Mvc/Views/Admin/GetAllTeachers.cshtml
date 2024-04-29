@@ -1,0 +1,47 @@
+﻿
+@model IEnumerable<ReturnedTeacherModelView>
+
+@if(Model == null || !Model.Any())
+{
+    <p class="alert-danger">No Teachers Found</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LaseName</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var teacher in Model)
+            {
+                <tr>
+                    <td>@teacher.FirstName</td>
+                    <td>@teacher.LaseName</td>
+                    <td>@teacher.Email</td>
+                    <td>@teacher.Course</td>
+                    @if(teacher.Photo is null || teacher.Photo.Length == 0)
+                    {
+                        <td><img width="75" class="rounded-5" alt=@(teacher.FirstName +" " + teacher.LaseName+" Photo")
+                            src="/images/Profile.png"/></td>
+                    }
+                    else
+                    {
+                        <td>
+                            <img width="75" class="rounded-5"
+                                 alt=@(teacher.FirstName +" " + teacher.LaseName+" Photo") 
+                                src="data:image/*;base64,@(Convert.ToBase64String(teacher.Photo))" 
+                            />
+                        </td>
+                    }
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}

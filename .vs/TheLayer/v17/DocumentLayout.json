@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\TheLayer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51DAF694-6544-4A8C-B81A-7C7B0D459C78}|TheLayer.Mvc\\TheLayer.Mvc.csproj|e:\\thelayer\\thelayer.mvc\\views\\student\\getallteachers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51DAF694-6544-4A8C-B81A-7C7B0D459C78}|TheLayer.Mvc\\TheLayer.Mvc.csproj|solutionrelative:thelayer.mvc\\views\\student\\getallteachers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51DAF694-6544-4A8C-B81A-7C7B0D459C78}|TheLayer.Mvc\\TheLayer.Mvc.csproj|e:\\thelayer\\thelayer.mvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51DAF694-6544-4A8C-B81A-7C7B0D459C78}|TheLayer.Mvc\\TheLayer.Mvc.csproj|solutionrelative:thelayer.mvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllTeachers.cshtml",
+              "DocumentMoniker": "E:\\TheLayer\\TheLayer.Mvc\\Views\\Student\\GetAllTeachers.cshtml",
+              "RelativeDocumentMoniker": "TheLayer.Mvc\\Views\\Student\\GetAllTeachers.cshtml",
+              "ToolTip": "E:\\TheLayer\\TheLayer.Mvc\\Views\\Student\\GetAllTeachers.cshtml",
+              "RelativeToolTip": "TheLayer.Mvc\\Views\\Student\\GetAllTeachers.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T14:57:38.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "E:\\TheLayer\\TheLayer.Mvc\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "TheLayer.Mvc\\Controllers\\StudentController.cs",
+              "ToolTip": "E:\\TheLayer\\TheLayer.Mvc\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "TheLayer.Mvc\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T14:56:41.254Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

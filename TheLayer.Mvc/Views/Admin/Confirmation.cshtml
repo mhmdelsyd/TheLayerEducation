@@ -1,0 +1,54 @@
+﻿@model ConfirmationModelView
+@{
+    ViewData["Title"] = "Details";
+}
+<script>
+    setTimeout(function () {
+        document.getElementById('success-div').style.display = 'none';
+    }, 3000);
+</script>
+
+
+<div class=" d-flex flex-column align-items-center justify-content-center">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <div id="form w-50">
+  
+        @if (Model.success)
+        {
+            <p id="success-div" class="alert-success text-success" style="font-size:32px">Operation Succeeded</p>
+            <table class="w-100 table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">First Name</th>
+                        <td>@Model.firstName</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Last Name</th>
+                        <td>@Model.lastName</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Password</th>
+                        <td>@Model.pass</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Course</th>
+                        <td>@Model.Course</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="alert-danger" style="font-size:32px">Operation Failed</p>
+        }
+    
+    <div id="editor"class="d-flex justify-content-around">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Go To Home</a>
+            <button id="printBtn" class="btn btn-secondary">Print</button>
+    </div>
+</div>
+</div>

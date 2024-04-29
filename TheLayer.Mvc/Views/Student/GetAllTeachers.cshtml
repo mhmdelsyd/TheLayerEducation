@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TeacherViewModel>
+@{
+    SubscribeState state = ViewBag.SubscribeState;
+    var EndTime = DateTime.Now.Add(new TimeSpan(0, 0, 5));
+}
+<script>
+    setTimeout(function () {
+        document.getElementById('success-div').style.display = 'none';
+    }, 3000);
+</script>
+
+@if (Model is null || !Model.Any())
+{
+    <p class="alert-danger">No Teachers Available...</p>
+}
+else
+{
+    <div id="success-div" class="alert-danger">
+        @if(state == SubscribeState.AlreadySubscribed)
+        {
+            <p>You Are Subscribed With this teacher</p>
+        }
+        else if (state == SubscribeState.Failed)
+        {
+            <p>SomeThing Goes Wrong,... Please Try Again</p>
+        }
+        else if(state == SubscribeState.Done)
+        {
+            <p>Subscription Has Done Successfully. :)</p>
+        }
+    </div>
+    <h1>All Teachers</h1>
+    <div class="container">
+        <div class="row row-cols-4 justify-content-between gap-3">
+            @foreach (var teacher in Model)
+            {
+                <div class="card" style="width: 18rem;">
+                    @if (teacher.Photo is null || teacher.Photo.Length == 0)
+                    {
+                        <img id="profile" width="75" class="rounded-5 card-img-top" alt=@(teacher.FirstName +" " + teacher.LastName+" Photo")
+                             src="/images/Profile.png" />
+                    }
+                    else
+                    {
+                        <img id="profile" width="75" class="rounded-5 card-img-top"
+                             alt=@(teacher.FirstName +" " + teacher.LastName+" Photo")
+                             src="data:image/*;base64,@(Convert.ToBase64String(teacher.Photo))" />
+                    }
+
+                    <div class="card-body">
+                        <h5 class="card-title">@teacher.FirstName @teacher.LastName</h5>
+                        <h5 class="card-text">@teacher.course Teacher.</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (teacher.Subscribed)
+                        {
+                            <a asp-action="GetLessonsSubscribedTeacher" asp-route-id="@teacher.Id" class="card-link">See All Lessons</a>
+                            <button disabled href="#" class="btn btn-secondary" >Subscribe</button>
+                        }
+                        else
+                        {
+                            <a asp-action="SubscribeTeacher" asp-route-id="@teacher.Id" class="card-link">Subscribe</a>
+                            <button disabled href="#" class="btn btn-secondary">See All Lessons</button>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,11 @@
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\InfraStructure.deps.json
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\InfraStructure.dll
+E:\TheLayer\InfraStructure\bin\Debug\net8.0\InfraStructure.pdb
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.AssemblyInfoInputs.cache
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.AssemblyInfo.cs
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.csproj.CoreCompileInputs.cache
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.dll
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\refint\InfraStructure.dll
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\InfraStructure.pdb
+E:\TheLayer\InfraStructure\obj\Debug\net8.0\ref\InfraStructure.dll

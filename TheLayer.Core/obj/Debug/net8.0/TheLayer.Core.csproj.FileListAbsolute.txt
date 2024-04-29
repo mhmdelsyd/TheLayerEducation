@@ -1,0 +1,13 @@
+E:\TheLayer\TheLayer.Core\bin\Debug\net8.0\TheLayer.Core.deps.json
+E:\TheLayer\TheLayer.Core\bin\Debug\net8.0\TheLayer.Core.dll
+E:\TheLayer\TheLayer.Core\bin\Debug\net8.0\TheLayer.Core.pdb
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.csproj.AssemblyReference.cache
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.AssemblyInfoInputs.cache
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.AssemblyInfo.cs
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.csproj.CoreCompileInputs.cache
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.sourcelink.json
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.dll
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\refint\TheLayer.Core.dll
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\TheLayer.Core.pdb
+E:\TheLayer\TheLayer.Core\obj\Debug\net8.0\ref\TheLayer.Core.dll

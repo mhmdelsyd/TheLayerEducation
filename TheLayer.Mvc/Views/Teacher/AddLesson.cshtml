@@ -1,0 +1,51 @@
+﻿@model AddLessonModelView
+
+@{
+    ViewData["Title"] = "Add Lesson";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form id="AddLessonForm" asp-action="AddLesson" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating">
+                <input asp-for="@Model.LessonName" class="form-control"  />
+                <label asp-for="@Model.LessonName"></label>
+                <span asp-validation-for="@Model.LessonName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="@Model.PdfUrl" class="form-control" />
+                <label asp-for="@Model.PdfUrl"></label>
+                <span asp-validation-for="@Model.PdfUrl" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="@Model.VideoUrl" class="form-control" />
+                <label asp-for="@Model.VideoUrl"></label>
+                <span asp-validation-for="@Model.VideoUrl" class="text-danger"></span>
+            </div>
+            <div class="d-flex flex-column gap-4">
+                
+                <img id="lessonImage" src="" width="500" height="500" alt="" />
+                <br />
+                <div class="form-floating">
+                    <input asp-for="@Model.ImageUrl"
+                           class="form-control"
+                            onchange="(e)=>document.getElementById('lessonImage').src = e.target.value"
+                            />
+                    <label asp-for="@Model.ImageUrl"></label>
+                    <span asp-validation-for="@Model.ImageUrl" class="text-danger"></span>
+                </div>
+            </div>
+                <br />
+            <br />
+            <br />
+            <div>
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

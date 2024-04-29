@@ -1,0 +1,75 @@
+﻿@{
+    var role = User.IsInRole(Roles.Admin) ?
+                                Roles.Admin : (
+                                    User.IsInRole(Roles.Student) ?
+                                    Roles.Student : (
+                                        User.IsInRole(Roles.Teacher) ?
+                                        Roles.Teacher :
+                                        "")
+                                    );
+}
+
+<div class="d-flex align-items-center">
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Get ALl Teachers</a>
+    </li>
+    @if (User.Identity?.IsAuthenticated ?? true)
+    {
+        if (User.IsInRole(Roles.Admin))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="CreateTeacher">Create Teacher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="GetAllTeachers">All Teachers</a>
+            </li>
+        }
+        else if (User.IsInRole(Roles.Teacher))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Teacher" asp-action="AddLesson">Add Lesson</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Teacher" asp-action="GetAllLessons">Get Lessons</a>
+            </li>
+        }
+        else if (User.IsInRole(Roles.Student))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Student" asp-action="GetAllTeachers">Get Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Student" asp-action="GetAllSubscribedTeachers">Subscribed</a>
+            </li>
+        }
+    }
+</div>
+<div class="d-flex align-items-center me-4">
+    @if (!User.Identity?.IsAuthenticated ?? true)
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Register">Register</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="LogIn">Log In</a>
+            </li>
+    }
+    else
+    {
+         <li class="nav-item bg-white rounded-circle overflow-hidden me-3">
+            <a asp-controller="@role" asp-action="EditDetails">
+                <img width="50" src="@FilesPaths.ProfileAny" alt="image Profile" />
+             </a>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Logout">Log Out</a>
+        </li>
+    }
+</div>

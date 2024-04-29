@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<LessonModelView>
+@if (Model == null || !Model.Any())
+{
+    <p class="alert-danger">No Teachers Found</p>
+}
+else
+{
+    <div class="d-flex align-items-center gap-3">
+        @foreach(var lesson in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="@lesson.ImageUrl" class="card-img-top" alt="@lesson.LessonName">
+                <div class="card-body">
+                    <h5 class="card-title">@lesson.LessonName</h5>
+                </div>
+                <div class="card-body">
+                    <a asp-action="GetLesson" asp-route-id="@lesson.Id" class="card-link">See Lesson</a>
+                </div>
+            </div>
+        }
+    </div>
+}

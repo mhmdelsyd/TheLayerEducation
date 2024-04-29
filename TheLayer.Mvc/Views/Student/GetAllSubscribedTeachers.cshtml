@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TeacherViewModel>
+
+@if(Model is null || !Model.Any())
+{
+    <p class="alert-danger">No Teachers Available...</p>
+}
+else
+{
+    <h1>Subscribed Teachers</h1>
+    foreach(var teacher in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            @if (teacher.Photo is null || teacher.Photo.Length == 0)
+            {
+                <img id="profile" width="75" class="rounded-5 card-img-top" alt=@(teacher.FirstName +" " + teacher.LastName+" Photo")
+                     src="/images/Profile.png" />
+            }
+            else
+            {
+                <img id="profile" width="75" class="rounded-5 card-img-top"
+                     alt=@(teacher.FirstName +" " + teacher.LastName+" Photo")
+                     src="data:image/*;base64,@(Convert.ToBase64String(teacher.Photo))" />
+            }
+            
+            <div class="card-body">
+                <h5 class="card-title">@teacher.FirstName @teacher.LastName</h5>
+                <h5 class="card-text">@teacher.course Teacher.</h5>
+            </div>
+            <div class="card-body">
+                <a asp-action="GetLessonsSubscribedTeacher" asp-route-id="@teacher.Id" class="card-link">See All Lessons</a>
+            </div>
+        </div>
+    }
+}

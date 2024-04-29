@@ -1,0 +1,48 @@
+﻿@model EditLessonModelView
+
+@{
+    ViewData["Title"] = "Edit Lesson";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form id="EditLessonForm" asp-action="EditLesson" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating">
+                <input asp-for="@Model.LessonName" class="form-control" />
+                <label asp-for="@Model.LessonName"></label>
+                <span asp-validation-for="@Model.LessonName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="@Model.PdfUrl" class="form-control" />
+                <label asp-for="@Model.PdfUrl"></label>
+                <span asp-validation-for="@Model.PdfUrl" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="@Model.VideoUrl" class="form-control" />
+                <label asp-for="@Model.VideoUrl"></label>
+                <span asp-validation-for="@Model.VideoUrl" class="text-danger"></span>
+            </div>
+                <input asp-for="@Model.Id" class="form-control visually-hidden" hidden/>
+           <div>
+               <img id="lessonImage" src="" alt=""/>
+                <div class="form-floating">
+                    <input asp-for="@Model.ImageUrl"
+                    class="form-control"
+                    onchange="(e)=>document.getElementById('lessonImage').src = e.target.value"
+                    />
+                    <label asp-for="@Model.ImageUrl"></label>
+                    <span asp-validation-for="@Model.ImageUrl" class="text-danger"></span>
+                </div>
+           </div>
+            <div class="d-flex gap-3">
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Edit</button>
+                <button asp-action="GetLesson" asp-route-Id="@Model.Id" class="w-100 btn btn-lg btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
